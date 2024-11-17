@@ -134,7 +134,7 @@ source .\env\bin\activate
 ```
 Then clone the GitHub repository and navigate to its directory. 
 ```bash
-git clone https://github.com/vincentmaesGitty/Pothole_Detector.git
+git clone https://github.com/vincentmaesGitty/Pothole_Detector_Git.git
 ```
 
 ##### 2. Install Dependencies
