@@ -59,14 +59,14 @@ Clone the repository to your local machine:
 2. Navigate to the directory where you want to clone the repository.
 3. Clone the repo using `git`:
     ```bash
-    git clone https://github.com/vincentmaesGitty/Pothole_Detector.git
+    git clone https://github.com/vincentmaesGitty/Pothole_Detector_Git.git
     ```
 ##### 3. Install the requirements
 With the virtual environment activated and the repository cloned, you can install the necessary dependencies:
 
 1. Navigate to the cloned repository directory:
     ```bash
-    cd your/path/Pothole_Detector
+    cd your/path/Pothole_Detector_Git
     ```
 2. Install the requirements using `pip`:
     ```bash
@@ -76,8 +76,8 @@ With the virtual environment activated and the repository cloned, you can instal
 1. Download the Dataset: After downloading the dataset from Kaggle, unzip it.
 2. Place Dataset in the Repository Folder:
 Move the dataset to the yolov5_PI/data folder within the repository.
-3. Edit the PotholeDetection.yaml File:
-- Open PotholeDetection.yaml in the yolov5_PI/data folder.
+3. Edit the DetectPot.yaml File:
+- Open DetectPot.yaml in the yolov5_PI/data folder.
 - Update the path variable with the correct path to your dataset, and ensure the train, val, and test folders match the dataset structure.
 
 ##### 5. Training the Model
