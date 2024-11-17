@@ -223,7 +223,7 @@ while True:
     filename_og = os.path.join(pic_path, f"{timestamp}_captured.jpg")
     filename_pred = os.path.join(pic_path, f"{timestamp}_predicted.jpg")
     cv2.imwrite(filename_pred, frame)
-    cv2.imwrite(filename_og, fimage_bgr)
+    cv2.imwrite(filename_og, image_bgr)
     
     # Save the image on 's' key press
     if cv2.waitKey(1) & 0xFF == ord('s'):
