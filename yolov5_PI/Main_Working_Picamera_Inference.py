@@ -173,9 +173,13 @@ classes = {
   2: "LongCrack",
   3: "LatCrack"}
 
+conf_thresh = 0.25 # Higher confidence threshold, means the model has to be more sure to make the detection.
+iou_thresh = 0.2 # Lower threshold, means with lower overlap they will be filtered out. 
+
 
 # Set paths
-weights_path = '/home/vincent/Documents/DetectPot/yolov5/best.pt'  # Path to your trained weights
+#weights_path = '/home/vincent/Documents/DetectPot/yolov5/best.pt'  # Path to your trained weights
+weights_path = '/home/vincent/Documents/DetectPot/yolov5/SingleClassYolov5Weights.pt'  # Path to your trained weights
 
 # save pictures
 pic_path = '/home/vincent/Documents/DetectPot/Fotos_Detection'
@@ -216,8 +220,10 @@ while True:
     
     # Save the image
     timestamp = int(time.time())
-    filename = os.path.join(pic_path, f"captured_image_{timestamp}.jpg")
-    cv2.imwrite(filename, frame)
+    filename_og = os.path.join(pic_path, f"{timestamp}_captured.jpg")
+    filename_pred = os.path.join(pic_path, f"{timestamp}_predicted.jpg")
+    cv2.imwrite(filename_pred, frame)
+    cv2.imwrite(filename_og, fimage_bgr)
     
     # Save the image on 's' key press
     if cv2.waitKey(1) & 0xFF == ord('s'):
